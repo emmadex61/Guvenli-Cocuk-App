@@ -102,7 +102,7 @@ final List<Video> videos = [
   ),
   Video(
     id: 'OUOpQw69KD4',
-    title: 'Maşa ile Koca Ayı 1.Bölüm',
+    title: 'Maşa ile Koca Ayı 10.Bölüm',
     thumbnailUrl: 'https://i.ytimg.com/vi/OUOpQw69KD4/0.jpg',
     duration: '6:38',
     cartoon: 'masa',

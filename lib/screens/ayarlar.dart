@@ -14,27 +14,33 @@ class _AyarlarState extends State {
       appBar: AppBar(
         backgroundColor: Colors.lightGreen,
         centerTitle: true,
-        title: Text("Ayarlar",style: TextStyle(
-          color: Colors.white,
-          fontStyle: FontStyle.italic,
-          fontSize: 20,
-          ),),
+        title: const Text(
+          "Ayarlar",
+          style: TextStyle(
+            color: Colors.white,
+            fontStyle: FontStyle.italic,
+            fontSize: 20,
+          ),
+        ),
       ),
       body: Container(
-          decoration: BoxDecoration(
-           image: DecorationImage(
-             image: NetworkImage(
-               "https://hdwallpaperim.com/wp-content/uploads/2017/08/31/156597-Adventure_Time.jpg",
-             ),
-             fit: BoxFit.cover,
-           ),
-         ),
-        child: Center(
-          child: Text("Ayarlar",style: TextStyle(
-          color: Colors.white,
-          fontStyle: FontStyle.italic,
-          fontSize: 20,
-          ),),
+        decoration: const BoxDecoration(
+          image: DecorationImage(
+            image: NetworkImage(
+              "https://hdwallpaperim.com/wp-content/uploads/2017/08/31/156597-Adventure_Time.jpg",
+            ),
+            fit: BoxFit.cover,
+          ),
+        ),
+        child: const Center(
+          child: Text(
+            "Ayarlar",
+            style: TextStyle(
+              color: Colors.white,
+              fontStyle: FontStyle.italic,
+              fontSize: 20,
+            ),
+          ),
         ),
       ),
     );

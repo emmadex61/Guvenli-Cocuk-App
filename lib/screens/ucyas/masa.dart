@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:guvenlicocukcizgifilm/models/link_model.dart';
 import 'package:guvenlicocukcizgifilm/screens/video_detay.dart';
 
+// ignore: camel_case_types
 class masa extends StatefulWidget {
   const masa({Key? key}) : super(key: key);
 
@@ -9,6 +10,7 @@ class masa extends StatefulWidget {
   State<StatefulWidget> createState() => _masaState();
 }
 
+// ignore: camel_case_types
 class _masaState extends State {
   get style => null;
   List<Video> videolar = [];
@@ -26,7 +28,7 @@ class _masaState extends State {
         appBar: AppBar(
           backgroundColor: Colors.lightGreen,
           centerTitle: true,
-          title: Text(
+          title: const Text(
             "Maşa ve Koca Ayı Bölümler",
             style: TextStyle(
               color: Colors.white,
@@ -36,7 +38,7 @@ class _masaState extends State {
           ),
         ),
         body: Container(
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               image: DecorationImage(
                 image: NetworkImage(
                   "https://hdwallpaperim.com/wp-content/uploads/2017/08/31/156597-Adventure_Time.jpg",
@@ -59,6 +61,7 @@ class _masaState extends State {
 
                     /// null-safety
                     if (model.yasGrubu != null && model.yasGrubu!.contains(3)) {
+                      // ignore: unnecessary_null_comparison
                       if (model.cartoon != null &&
                           model.cartoon.contains('masa')) {
                         return InkWell(
@@ -75,10 +78,11 @@ class _masaState extends State {
                           child: Column(
                             children: [
                               Padding(
-                                padding: EdgeInsets.symmetric(horizontal: 20),
+                                padding:
+                                    const EdgeInsets.symmetric(horizontal: 20),
                                 child: Text(
                                   model.title,
-                                  style: TextStyle(
+                                  style: const TextStyle(
                                       color: Colors.white,
                                       fontSize: 20,
                                       fontStyle: FontStyle.italic,
@@ -87,8 +91,9 @@ class _masaState extends State {
                               ),
                               Container(
                                 height: 160,
-                                padding: EdgeInsets.symmetric(horizontal: 20),
-                                margin: EdgeInsets.all(8),
+                                padding:
+                                    const EdgeInsets.symmetric(horizontal: 20),
+                                margin: const EdgeInsets.all(8),
                                 decoration: BoxDecoration(
                                   image: DecorationImage(
                                     image: NetworkImage(model.thumbnailUrl),
@@ -96,16 +101,16 @@ class _masaState extends State {
                                   ),
                                 ),
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 height: 30,
                               ),
                             ],
                           ),
                         );
                       }
-                      return SizedBox();
+                      return const SizedBox();
                     }
-                    return SizedBox();
+                    return const SizedBox();
                   },
                 ),
               ],

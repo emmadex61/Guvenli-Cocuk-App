@@ -11,10 +11,7 @@ import 'package:guvenlicocukcizgifilm/screens/ucyas/masa.dart';
 import 'package:guvenlicocukcizgifilm/screens/altiyas/niloya.dart';
 import 'package:guvenlicocukcizgifilm/screens/altiyas/pepe.dart';
 import 'package:guvenlicocukcizgifilm/screens/ucyas/pingu.dart';
-
-
 import 'package:guvenlicocukcizgifilm/screens/anasayfa.dart';
-import 'package:guvenlicocukcizgifilm/screens/ayarlar.dart';
 import 'package:guvenlicocukcizgifilm/screens/bizeulasin.dart';
 import 'package:guvenlicocukcizgifilm/screens/altiyas/altiyas.dart';
 import 'package:guvenlicocukcizgifilm/screens/dokuzyas/dokuzyas.dart';
@@ -35,7 +32,6 @@ void main() {
     initialRoute: "/",
     routes: {
       "/":(context) => Anasayfa(),
-      "/ayarlar":(context) => Ayarlar(),
       "/bizeulasin":(context) => BizeUlasin(),
       "/cizgifilmler":(context) => Cizgifilmler(),
       "/cocuksarkilari":(context) => cocuksarkilari(),

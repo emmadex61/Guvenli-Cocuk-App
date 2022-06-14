@@ -68,7 +68,7 @@ class _VideoDetayState extends State<VideoDetay> {
       // ),
       body: SafeArea(
         child: Container(
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
             image: DecorationImage(
               image: NetworkImage(
                 "https://hdwallpaperim.com/wp-content/uploads/2017/08/31/156597-Adventure_Time.jpg",
@@ -82,16 +82,16 @@ class _VideoDetayState extends State<VideoDetay> {
                 controller: _controller,
                 liveUIColor: Colors.amber,
               ),
-              SizedBox(height: 55),
+              const SizedBox(height: 55),
               Text(
                 videos[widget.index].title,
-                style: TextStyle(
+                style: const TextStyle(
                     color: Colors.white,
                     fontSize: 20,
                     fontStyle: FontStyle.italic,
                     fontWeight: FontWeight.bold),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
 

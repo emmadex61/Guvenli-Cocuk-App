@@ -14,12 +14,11 @@ class _CizgifilmlerState extends State {
       appBar: AppBar(
         backgroundColor: Colors.lightGreen,
         centerTitle: true,
-        title: Text("Çizgi Filmler"),
+        title: const Text("Çizgi Filmler"),
       ),
-      body: Container(
-        child: Center(
-          child: Text("Çizgi Filmler"),
-        ),
+      body: const Center(
+        // ignore: unnecessary_const
+        child: const Text("Çizgi Filmler"),
       ),
     );
   }

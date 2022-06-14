@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:guvenlicocukcizgifilm/models/settings.dart';
-import 'package:guvenlicocukcizgifilm/screens/anasayfa.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class MyDrawer extends StatefulWidget {
+  const MyDrawer({Key? key}) : super(key: key);
+
   @override
   State<StatefulWidget> createState() => _MyDrawerState();
 }
@@ -40,7 +41,7 @@ class _MyDrawerState extends State {
             child: Align(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
+                children: const <Widget>[
                   Icon(
                     Icons.child_care,
                     color: Colors.white,
@@ -58,16 +59,16 @@ class _MyDrawerState extends State {
                 ],
               ),
             ),
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               color: Colors.orange,
             ),
           ),
           ListTile(
-            leading: Icon(
+            leading: const Icon(
               Icons.home,
               color: Colors.white,
             ),
-            title: Text(
+            title: const Text(
               'Anasayfa',
               style: TextStyle(
                 color: Colors.white,
@@ -76,7 +77,7 @@ class _MyDrawerState extends State {
                 fontWeight: FontWeight.bold,
               ),
             ),
-            trailing: Icon(
+            trailing: const Icon(
               Icons.arrow_right,
               color: Colors.white,
             ),
@@ -85,11 +86,11 @@ class _MyDrawerState extends State {
             },
           ),
           ExpansionTile(
-            leading: Icon(
+            leading: const Icon(
               Icons.child_care,
               color: Colors.white,
             ),
-            title: Text(
+            title: const Text(
               'Çizgi Filmler',
               style: TextStyle(
                 color: Colors.white,
@@ -98,14 +99,14 @@ class _MyDrawerState extends State {
                 fontWeight: FontWeight.bold,
               ),
             ),
-            trailing: Icon(
+            trailing: const Icon(
               Icons.arrow_drop_down,
               color: Colors.white,
             ),
             children: <Widget>[
               if (settings?.show3AndUp == true)
                 ListTile(
-                  title: Text(
+                  title: const Text(
                     '+3 Yaş ve Üzeri',
                     style: TextStyle(
                       color: Colors.white,
@@ -114,7 +115,7 @@ class _MyDrawerState extends State {
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  trailing: Icon(
+                  trailing: const Icon(
                     Icons.arrow_right,
                     color: Colors.white,
                   ),
@@ -124,7 +125,7 @@ class _MyDrawerState extends State {
                 ),
               if (settings?.show6AndUp == true)
                 ListTile(
-                  title: Text(
+                  title: const Text(
                     '+6 Yaş ve Üzeri',
                     style: TextStyle(
                       color: Colors.white,
@@ -133,7 +134,7 @@ class _MyDrawerState extends State {
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  trailing: Icon(
+                  trailing: const Icon(
                     Icons.arrow_right,
                     color: Colors.white,
                   ),
@@ -143,7 +144,7 @@ class _MyDrawerState extends State {
                 ),
               if (settings?.show9AndUp == true)
                 ListTile(
-                  title: Text(
+                  title: const Text(
                     '+9 Yaş ve Üzeri',
                     style: TextStyle(
                       color: Colors.white,
@@ -152,7 +153,7 @@ class _MyDrawerState extends State {
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  trailing: Icon(
+                  trailing: const Icon(
                     Icons.arrow_right,
                     color: Colors.white,
                   ),
@@ -162,7 +163,7 @@ class _MyDrawerState extends State {
                 ),
               if (settings?.show13AndUp == true)
                 ListTile(
-                  title: Text(
+                  title: const Text(
                     '+13 Yaş ve Üzeri',
                     style: TextStyle(
                       color: Colors.white,
@@ -171,7 +172,7 @@ class _MyDrawerState extends State {
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  trailing: Icon(
+                  trailing: const Icon(
                     Icons.arrow_right,
                     color: Colors.white,
                   ),
@@ -182,11 +183,11 @@ class _MyDrawerState extends State {
             ],
           ),
           ListTile(
-            leading: Icon(
+            leading: const Icon(
               Icons.music_video,
               color: Colors.white,
             ),
-            title: Text(
+            title: const Text(
               'Çocuk Şarkıları',
               style: TextStyle(
                 color: Colors.white,
@@ -195,7 +196,7 @@ class _MyDrawerState extends State {
                 fontWeight: FontWeight.bold,
               ),
             ),
-            trailing: Icon(
+            trailing: const Icon(
               Icons.arrow_right,
               color: Colors.white,
             ),
@@ -204,11 +205,11 @@ class _MyDrawerState extends State {
             },
           ),
           ListTile(
-            leading: Icon(
+            leading: const Icon(
               Icons.verified_user_outlined,
               color: Colors.white,
             ),
-            title: Text(
+            title: const Text(
               'Eğitici Videolar',
               style: TextStyle(
                 color: Colors.white,
@@ -217,7 +218,7 @@ class _MyDrawerState extends State {
                 fontWeight: FontWeight.bold,
               ),
             ),
-            trailing: Icon(
+            trailing: const Icon(
               Icons.arrow_right,
               color: Colors.white,
             ),
@@ -226,11 +227,11 @@ class _MyDrawerState extends State {
             },
           ),
           ListTile(
-            leading: Icon(
+            leading: const Icon(
               Icons.video_camera_front_outlined,
               color: Colors.white,
             ),
-            title: Text(
+            title: const Text(
               'Dil Eğitimi',
               style: TextStyle(
                 color: Colors.white,
@@ -239,7 +240,7 @@ class _MyDrawerState extends State {
                 fontWeight: FontWeight.bold,
               ),
             ),
-            trailing: Icon(
+            trailing: const Icon(
               Icons.arrow_right,
               color: Colors.white,
             ),

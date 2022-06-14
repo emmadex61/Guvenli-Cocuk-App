@@ -1,15 +1,11 @@
-import 'dart:developer';
-
 import 'package:anim_search_bar/anim_search_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:guvenlicocukcizgifilm/models/settings.dart';
-import 'package:guvenlicocukcizgifilm/screens/ayarlar.dart';
 import 'package:guvenlicocukcizgifilm/screens/bizeulasin.dart';
 import 'package:guvenlicocukcizgifilm/screens/ebeveyn.dart';
 import 'package:guvenlicocukcizgifilm/screens/hakkimizda.dart';
 import 'package:guvenlicocukcizgifilm/widgets/myDrawer.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-
 import '../models/link_model.dart';
 import 'video_detay.dart';
 
@@ -97,20 +93,35 @@ class _AnasayfaState extends State<Anasayfa> {
         context: context,
         builder: (context) {
           return AlertDialog(
-            title: const Text('Ebeveyn Şifresini Giriniz'),
+            title: const Text(
+              'Ebeveyn Şifresini Giriniz',
+              style: TextStyle(color: Colors.orange),
+            ),
             content: TextField(
               controller: passwordController,
               decoration: const InputDecoration(hintText: "Ebeveyn Şifresi"),
             ),
             actions: <Widget>[
               ElevatedButton(
-                child: const Text("İptal"),
+                child: const Text(
+                  "İptal",
+                  style: TextStyle(color: Colors.orange),
+                ),
                 onPressed: () => Navigator.pop(context),
+                style: ButtonStyle(
+                  backgroundColor: MaterialStateProperty.all(Colors.white),
+                ),
               ),
               ElevatedButton(
-                child: const Text('Tamam'),
+                child: const Text(
+                  'Tamam',
+                  style: TextStyle(color: Colors.orange),
+                ),
                 onPressed: () =>
                     Navigator.pop(context, passwordController.text),
+                style: ButtonStyle(
+                  backgroundColor: MaterialStateProperty.all(Colors.white),
+                ),
               ),
             ],
           );
@@ -171,10 +182,7 @@ class _AnasayfaState extends State<Anasayfa> {
           PopupMenuButton(
             onSelected: (item) {
               print("$item");
-              if (item == "Ayarlar") {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => const Ayarlar()));
-              }
+
               if (item == "Hakkımızda") {
                 Navigator.push(
                     context,

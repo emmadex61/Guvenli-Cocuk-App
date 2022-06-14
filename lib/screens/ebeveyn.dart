@@ -180,32 +180,44 @@ class _EbeveynState extends State<Ebeveyn> {
           controlAffinity: ListTileControlAffinity.leading,
           title: const Text("13 Yaş ve Üzeri Videoları Göster"),
         ),
+        const SizedBox(
+          height: 20,
+        ),
         OutlinedButton(
           onPressed: () {
             sharedPreferences.setString("settings", settings!.toRawJson());
           },
+           style: ButtonStyle(
+            backgroundColor: MaterialStateProperty.all(Colors.white),
+          ),
           child: const Text(
             "Ayarları Kaydet",
+                   style: TextStyle(color: Colors.orange),
           ),
         ),
+        const SizedBox(
+          height: 20,
+        ),
+         ElevatedButton(
+                 onPressed: () {
+                   setState(() {
+                     password = null;
+                     sharedPreferences.remove("password");
+                   });
+                 },
+                 style: ButtonStyle(
+                  backgroundColor: MaterialStateProperty.all(Colors.white),
+                 ),
+                 child: const Text(
+                   'Şifreyi Sıfırla',
+                   style: TextStyle(color: Colors.orange),
+                 ),
+               ),
+
       ],
     );
   }
 }
 
 
-  // ElevatedButton(
-  //         onPressed: () {
-  //           setState(() {
-  //             password = null;
-  //             sharedPreferences.remove("password");
-  //           });
-  //         },
-  //         style: ButtonStyle(
-  //           backgroundColor: MaterialStateProperty.all(Colors.white),
-  //         ),
-  //         child: const Text(
-  //           'Şifreyi Sıfırla',
-  //           style: TextStyle(color: Colors.orange),
-  //         ),
-  //       ),
+  
